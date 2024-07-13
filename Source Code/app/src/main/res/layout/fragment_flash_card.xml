@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        tools:context=".ui.fragments.FlashCardFragment">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/buttonEnglishMode"
+                        android:text="English"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginRight="10dp"
+                        style="@style/CustomButtonTranslate"
+                        />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/buttonVietnameseMode"
+                        android:text="Vietnamese"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="80dp"
+                        style="@style/CustomButtonTranslate"
+                       />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/textViewQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginVertical="10dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Question"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/textViewNotMasterWord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Chưa thành thạo : 22"
+                        android:textColor="@color/yellow"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/textViewQuestionCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter_regular"
+                        android:gravity="center"
+                        android:text="1/7"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/textViewMasterWord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Đã thành thạo: 22"
+                        android:textColor="@color/green"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:gravity="right"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Thuật ngữ"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:id="@+id/layoutCard"
+                android:layout_height="match_parent">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewBelow"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="65dp"
+                    app:cardCornerRadius="5dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/style_background_btn_off"
+                        android:padding="1dp">
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewAbove"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:layout_marginTop="65dp"
+                    android:tag="faceUp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginHorizontal="20dp"
+                    app:cardCornerRadius="5dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutFlashCardBelow"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/style_background_btn_off"
+                        android:padding="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right">
+
+                                <ImageButton
+                                    android:id="@+id/buttonStar"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:background="@null"
+                                    android:src="@drawable/ic_star" />
+
+                                <ImageButton
+                                    android:id="@+id/buttonSpeaker"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:background="@null"
+                                    android:src="@drawable/ic_speaker" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/textViewWord"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageButton
+                    android:id="@+id/buttonBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@drawable/ic_backleft_gray" />
+
+                <ImageButton
+                    android:id="@+id/buttonCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/ic_cancel" />
+
+                <ImageButton
+                    android:id="@+id/buttonTick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="120dp"
+                    android:background="@drawable/ic_tick" />
+
+                <ImageButton
+                    android:id="@+id/buttonAuto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_playing"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</layout>

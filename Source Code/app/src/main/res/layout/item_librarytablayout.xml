@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textViewTabItem"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/style_background_btn_off"
+    android:gravity="center"
+    android:textSize="13sp"
+    android:layout_weight="1"
+    android:padding="8dp"
+    android:text="Text"
+    android:textStyle="bold"
+    android:textColor="@color/blue_400"
+     />

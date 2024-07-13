@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="word"
+            type="com.iiex.languageassistant.viewmodels.WordTypeViewModel.WordType" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/style_round_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:id="@+id/buttonSpeaker"
+                    android:background="@drawable/ic_speaker"
+                    android:layout_width="18dp"
+                    android:layout_gravity="right"
+                    android:layout_margin="18dp"
+                    android:layout_height="18dp"/>
+                <TextView
+                    android:id="@+id/textViewWord"
+
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/editTextWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/blue_400"
+                    android:layout_marginBottom="20dp"
+                    android:padding="5dp"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/style_edit_text_word_input"
+                    />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/editTextWordCorrect"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:visibility="gone"
+
+                    android:inputType="none"
+                    android:padding="5dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/green"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginHorizontal="50dp"
+                    android:background="@drawable/style_edit_text_word_true"
+                    />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="105dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginVertical="20dp"
+                    android:layout_height="30dp">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/buttonCheck"
+                        android:tag="false"
+                        android:background="@drawable/style_round_btn_redo"
+                        android:text="@string/check"
+                        android:textColor="@color/white"
+                        android:layout_width="105dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="15dp"
+                        android:layout_height="30dp"/>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="question"
+            type="com.iiex.languageassistant.viewmodels.Question" />
+        <variable
+            name="viewModel"
+            type="com.iiex.languageassistant.viewmodels.MultipleChoiceFragViewModel" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewMultipleChoice"
+        android:layout_width="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/style_round_item"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/buttonSpeaker"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="right"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/ic_speaker" />
+
+                <TextView
+                    android:id="@+id/textViewWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginBottom="40dp"
+                    android:text="@{question.questionText}"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/layoutQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="20dp"
+                    android:elevation="10dp"
+                    android:orientation="vertical">
+                        <RadioGroup
+                            android:id="@+id/radioGroupOption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/layoutOptionA"
+                                android:layout_width="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="8dp"
+                                android:elevation="5dp"
+                                android:background="@drawable/style_custom_radio_answer"
+                                android:orientation="horizontal">
+                                <RadioButton
+                                    android:id="@+id/radioOptionA"
+                                    style="@style/RadioButtonStyleMultiplechoice"
+                                    android:text="@{question.options.get(0).optionText}" />
+                                <ImageButton
+                                    android:id="@+id/buttonSpeakerA"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="right|center"
+                                    android:layout_margin="15dp"
+                                    android:background="@drawable/ic_speaker" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/layoutOptionB"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="8dp"
+                                android:background="@drawable/style_custom_radio_answer"
+                                android:orientation="horizontal">
+                                <RadioButton
+                                    android:id="@+id/radioOptionB"
+                                    style="@style/RadioButtonStyleMultiplechoice"
+                                    android:text="@{question.options.get(1).optionText}" />
+                                <ImageButton
+                                    android:id="@+id/buttonSpeakerB"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="right|center"
+                                    android:layout_margin="15dp"
+                                    android:background="@drawable/ic_speaker" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/layoutOptionC"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="8dp"
+                                android:background="@drawable/style_custom_radio_answer"
+                                android:orientation="horizontal">
+                                <RadioButton
+                                    android:id="@+id/radioOptionC"
+                                    style="@style/RadioButtonStyleMultiplechoice"
+                                    android:text="@{question.options.get(2).optionText}" />
+                                <ImageButton
+                                    android:id="@+id/buttonSpeakerC"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="right|center"
+                                    android:layout_margin="15dp"
+                                    android:background="@drawable/ic_speaker" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/layoutOptionD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="8dp"
+                                android:background="@drawable/style_custom_radio_answer"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioOptionD"
+                                    style="@style/RadioButtonStyleMultiplechoice"
+                                    android:text="@{question.options.get(3).optionText}" />
+                                <ImageButton
+                                    android:id="@+id/buttonSpeakerD"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="right|center"
+                                    android:layout_margin="15dp"
+                                    android:background="@drawable/ic_speaker" />
+                            </LinearLayout>
+                        </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

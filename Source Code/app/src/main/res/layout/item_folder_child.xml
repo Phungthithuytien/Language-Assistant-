@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="folder"
+            type="com.iiex.languageassistant.data.model.ref.DataItem.Folder" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/style_round_item"
+        android:paddingVertical="5dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:text="@{folder.title}"
+            android:id="@+id/textViewFolderName"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/ic_folder"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewTopicNumber"
+            android:text="@{folder.topicCount + ` topics`}"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginVertical="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonContinue"
+            android:text="@string/Continue"
+            android:background="@drawable/style_background_btn_off"
+            android:textColor="@color/blue_400"
+            android:paddingHorizontal="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</layout>

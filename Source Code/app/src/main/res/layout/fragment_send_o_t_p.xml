@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="forgotPasswordFragment"
+                type="com.iiex.languageassistant.ui.fragments.SendOTPFragment" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        tools:context=".ui.fragments.SendOTPFragment">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginHorizontal="25dp"
+                android:text="Nhập địa chỉ email để nhận mã xác nhận."
+                android:layout_gravity="center"
+                style="@style/CustomTextViewLabelAuth"/>
+            <TextView
+                android:text="Email"
+                style="@style/CustomTextViewLabelAuth"
+                />
+
+            <!-- Email EditText -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                app:startIconDrawable="@drawable/ic_mail"
+                app:startIconTint="@color/white"
+                android:textColorHint="@color/white"
+                android:layout_height="wrap_content"
+                app:hintTextColor="@color/white"
+                android:id="@+id/textlayoutEmail"
+                app:boxStrokeColor="@color/white"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextEmail"
+                    style="@style/CustomTextInputEditTextAuth"
+                    android:inputType="textEmailAddress"
+                    android:text="" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonSendOTP"
+                android:layout_marginVertical="10dp"
+                style="@style/CustomButtonAuth"
+                android:text="@string/send"
+                />
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:text="Bạn đã có tài khoản ?"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/inter_extrabold"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/textviewLogin"
+                    android:textColor="@color/blue_200"
+                    android:text="Đăng nhập"
+                    android:fontFamily="@font/inter_extrabold"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> forgotPasswordFragment.login()}"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

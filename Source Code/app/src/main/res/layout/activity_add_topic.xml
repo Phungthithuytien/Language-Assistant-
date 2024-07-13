@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="topic"
+            type="com.iiex.languageassistant.data.model.Topic" />
+        <variable
+            name="viewModel"
+            type="com.iiex.languageassistant.viewmodels.WordItemViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="10dp"
+        tools:context=".ui.activities.AddTopicActivity">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    app:titleTextColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/toolbar"
+                    android:background="#C3C3C3" />
+                <TextView
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:layout_marginVertical="10dp"
+                    android:text="@string/topicTitle"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/editTextTitle"
+                    android:background="@drawable/style_background_btn_off"
+                    android:layout_width="match_parent"
+                    android:hint="@string/inputTitle"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@={topic.title}"
+                    android:textColorHint="@color/blue_400_50"
+                    android:padding="10dp"
+                    android:drawableRight="@drawable/ic_pen"
+                    android:layout_height="50dp"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:layout_marginVertical="10dp"
+                    android:text="@string/vocabu"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <ImageButton
+                    android:id="@+id/ImageButtonAddItem"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/ic_add"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:onClick="@{() -> viewModel.addItem()}"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonSave"
+                    android:layout_width="136dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/style_round_btn2"
+                    android:paddingHorizontal="30dp"
+                    android:text="@string/Save"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

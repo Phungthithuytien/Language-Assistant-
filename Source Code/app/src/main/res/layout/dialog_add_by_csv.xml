@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="350dp"
+        android:layout_gravity="center"
+        android:background="@drawable/style_round_dialog"
+        android:layout_margin="20dp"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/textViewAddByCSV"
+            android:layout_width="match_parent"
+            android:paddingHorizontal="10dp"
+            android:gravity="center|left"
+            android:drawableLeft="@drawable/ic_add_into_folder"
+            android:drawablePadding="30dp"
+            android:textColor="@color/black"
+            android:layout_height="50dp"
+            android:text="Thêm bằng file CSV"
+            />
+    </LinearLayout>

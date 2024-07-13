@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.LoginFragment">
+    <data>
+        <variable
+            name="authenticationViewModel"
+            type="com.iiex.languageassistant.viewmodels.AuthenticationViewModel" />
+        <variable
+            name="loginFragment"
+            type="com.iiex.languageassistant.ui.fragments.LoginFragment" />
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Email"
+                style="@style/CustomTextViewLabelAuth"
+                />
+
+            <!-- Email EditText -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                app:startIconDrawable="@drawable/ic_mail"
+                app:startIconTint="@color/white"
+                android:textColorHint="@color/white"
+                android:layout_height="wrap_content"
+                app:hintTextColor="@color/white"
+                android:id="@+id/textlayoutEmail"
+                app:boxStrokeColor="@color/white"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextEmail"
+                    style="@style/CustomTextInputEditTextAuth"
+                    android:inputType="textEmailAddress"
+                    android:text="@={authenticationViewModel.email}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Mật khẩu TextView -->
+            <TextView
+                android:text="Mật khẩu"
+                style="@style/CustomTextViewLabelAuth"
+                />
+
+            <!-- Mật khẩu EditText -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textlayoutPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:startIconTint="@color/white"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/white"
+                app:hintTextColor="@color/white"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextPassword"
+                    android:inputType="textPassword"
+                    style="@style/CustomTextInputEditTextAuth"
+                    android:text="@={authenticationViewModel.password}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textviewForgotPassword"
+                android:fontFamily="@font/inter_extrabold"
+                android:textColor="@color/blue_200"
+                android:textSize="14sp"
+                android:layout_gravity="right"
+                android:text="@string/forgotpassword"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> loginFragment.forgotPassword()}"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonLogin"
+                style="@style/CustomButtonAuth"
+                android:text="@string/login"
+                android:onClick="@{() -> loginFragment.login()}" />
+
+            <LinearLayout
+                android:layout_marginTop="70dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/white"
+                    android:text="Bạn chưa có tài khoản ?"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_extrabold"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/textviewRegister"
+                    android:fontFamily="@font/inter_extrabold"
+                    android:textColor="@color/blue_200"
+                    android:textSize="14sp"
+                    android:text="@string/register"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> loginFragment.register()}"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</layout>

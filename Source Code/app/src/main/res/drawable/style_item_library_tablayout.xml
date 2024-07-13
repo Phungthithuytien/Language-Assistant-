@@ -1,0 +1,23 @@
+<!-- custom_button_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Button in its default state -->
+    <item android:state_pressed="false" android:state_focused="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/default_text_color" />
+            <stroke
+                android:width="2dp"
+            android:color="@color/blue_500" />
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+    <!-- Button in its pressed/focused state -->
+    <item android:state_pressed="true" android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/blue_500" />
+            <stroke
+                android:width="2dp"
+                android:color="@color/blue_500"/>
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+</selector>

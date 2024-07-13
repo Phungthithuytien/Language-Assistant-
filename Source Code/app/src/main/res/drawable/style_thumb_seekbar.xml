@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:alpha="0.5">
+        <shape android:shape="oval">
+            <solid android:color="@color/blue_200" />
+            <solid android:background="@android:color/transparent" /> <!-- Sử dụng màu trong suốt -->
+            <size
+                android:width="10dp"
+                android:height="10dp" />
+        </shape>
+    </item>
+</selector>

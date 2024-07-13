@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "739969598015",
+    "firebase_url": "https://language-assistant-7727-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "language-assistant-7727",
+    "storage_bucket": "language-assistant-7727.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739969598015:android:a59b903b8f8c50271eae8a",
+        "android_client_info": {
+          "package_name": "com.iiex.languageassistant"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAysynbpJzk19OcpKW_DrqsSLDaxSafTVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739969598015:android:f991202938ab3e0b1eae8a",
+        "android_client_info": {
+          "package_name": "hoangphuc.app.project001"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAysynbpJzk19OcpKW_DrqsSLDaxSafTVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

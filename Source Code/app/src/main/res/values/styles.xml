@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="avatarBoder">
+        <item name="cornerSize">10dp</item>
+    </style>
+    <style name="CustomTextTitleApp" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">28sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/lalezar</item>
+        <item name="android:layout_marginBottom">50dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="CustomButtonAuth" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@drawable/style_round_btn</item>
+        <item name="android:layout_marginHorizontal">40dp</item>
+        <item name="android:layout_marginVertical">30dp</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+    </style>
+    <style name="CustomEditTextAuth" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginHorizontal">20dp</item>
+        <item name="android:layout_marginVertical">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:background">@drawable/style_round_edittext</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+    <style name="CustomTextInputEditTextAuth" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:background">@drawable/style_round_edittext</item>
+    </style>
+    <style name="CustomTextViewLabelAuth" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">20dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:layout_marginVertical">5dp</item>
+    </style>
+    <style name="RadioButtonStyleMultiplechoice" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="TextViewTitleRow" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/black_200_2</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:paddingTop">30dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CustomButtonTranslate">
+        <item name="android:layout_width">105dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/style_background_btn_off</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/blue_400</item>
+        <item name="android:textSize">10sp</item>
+
+    </style>
+</resources>
